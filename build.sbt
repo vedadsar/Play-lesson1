@@ -10,5 +10,9 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
+<<<<<<< HEAD
   javaWs,
+=======
+  javaWs
+>>>>>>> f69a440849b7b6779fdb0de2fbd850f0756b5d99
 )

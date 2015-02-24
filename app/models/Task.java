@@ -1,7 +1,10 @@
 package models;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> f69a440849b7b6779fdb0de2fbd850f0756b5d99
 import javax.persistence.*;
 
 import play.data.validation.Constraints.*;
@@ -15,6 +18,7 @@ public class Task extends Model {
 	@MinLength(2)
 	public String name;
 	
+<<<<<<< HEAD
 	static Finder<Integer, Task> find = new Finder<Integer, Task>(Integer.class, Task.class);
 	
 	
@@ -29,4 +33,9 @@ public class Task extends Model {
 	public static void remove(int id){
 		find.byId(id).delete();
 	}
+=======
+	public static void create(Task t){
+		t.save();
+	}
+>>>>>>> f69a440849b7b6779fdb0de2fbd850f0756b5d99
 }

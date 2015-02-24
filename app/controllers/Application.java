@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  package controllers;
+=======
+package controllers;
+>>>>>>> f69a440849b7b6779fdb0de2fbd850f0756b5d99
 
 import play.*;
 import play.data.Form;
@@ -11,6 +15,7 @@ public class Application extends Controller {
 	static Form<Task> submitForm = new Form<Task>(Task.class);
 	
     public static Result index() {
+<<<<<<< HEAD
         return ok(index.render("Welcome to TODO.", submitForm, Task.all() ));
         
     }
@@ -32,4 +37,18 @@ public class Application extends Controller {
     	return redirect("/");
     }
   
+=======
+        return ok(index.render("Welcome to TODO.", submitForm));
+    }
+    
+    public static Result createTask(){
+    	Task.create(submitForm.bindFromRequest().get());
+    	return index();
+    }
+    
+    public static Result deleteTask(){
+    	return TODO;
+    }
+
+>>>>>>> f69a440849b7b6779fdb0de2fbd850f0756b5d99
 }
